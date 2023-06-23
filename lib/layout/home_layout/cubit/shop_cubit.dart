@@ -67,7 +67,7 @@ class ShopCubit extends Cubit<ShopStatus> {
 
   void start() {
     onBoarding = CachHelper.getData(key: 'onBoarding') ?? false;
-    token = CachHelper.getData(key: 'token');
+    token = CachHelper.getData(key: 'token').toString();
     print("Token = > $token");
 
     if (token != '') {
